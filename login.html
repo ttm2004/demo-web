@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="lienhe.css">
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <title>Đăng nhập</title>
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <form class="register-form">
+          <h1>Đăng ký</h1>
+          <input type="text" placeholder="Tên người dùng" /><label
+            id="check"
+          ></label>
+          <input type="password" placeholder="Mật khẩu" /><label></label>
+          <input type="text" placeholder="Địa chỉ email" />
+          <button onclick="checkdata()">Tạo tài khoản</button>
+          <p class="message">Bạn đã có tài khoản? <a href="#">Đăng nhập</a></p>
+        </form>
+        <form class="login-form">
+          <h1>Đăng nhập</h1>
+          <input type="text" id="user" placeholder="Tên người dùng" />
+          <input class="password" type="password" placeholder="Mật khẩu" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"></svg>
+          <button onclick="checkdata()">Đăng nhập</button>
+          <p class="message">
+            Bạn chưa có tài khoản? <a id="login-href" href="trangchu.html">Tạo tài khoản</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(".message a").click(function () {
+      $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
+    function checkdata() {
+      var data = document.getElementById("user");
+      var data_user = data.value;
+      if (data_user != "") {
+
+        // window.location.href = "https://www.facebook.com/iutlinhs1";
+        alert("Please enter");
+        window.preventDefault();
+      } 
+      else {
+        alert("Please enter");
+      }
+    }
+  </script>
+</html>
